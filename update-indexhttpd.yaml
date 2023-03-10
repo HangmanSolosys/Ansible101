@@ -1,0 +1,17 @@
+---
+
+- hosts: all 
+  become: true 
+  tasks:
+
+  - name: update repository index
+    yum: 
+      update_cache: yes
+      
+  - name: install httpd package 
+    yum:
+      name: httpd 
+
+  - name: add php support for apache 
+    yum:
+     name: php

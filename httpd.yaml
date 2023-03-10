@@ -1,6 +1,6 @@
 ---
 - name: Check httpd service
-  hosts: 192.168.0.104
+  hosts: all
 
   tasks:
     - name: Check if httpd is running
