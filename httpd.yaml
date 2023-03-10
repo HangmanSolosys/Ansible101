@@ -1,0 +1,14 @@
+---
+- name: Check httpd service
+  hosts: 192.168.0.104
+
+  tasks:
+    - name: Check if httpd is running
+      systemd:
+        name: httpd
+        state: started
+      register: httpd_status
+
+    - name: Print httpd status
+      debug:
+        var: httpd_status

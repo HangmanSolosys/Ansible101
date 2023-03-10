@@ -1,0 +1,8 @@
+---
+  - name: iluvnano
+    hosts: 192.168.0.104 
+    tasks: 
+      - name: ensure nano is there
+        yum:
+          name: nano  
+          state: latest
