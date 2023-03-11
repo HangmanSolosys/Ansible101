@@ -1,0 +1,19 @@
+---
+
+- hosts: all 
+  become: true 
+  tasks:
+
+  - name: update repository index
+    yum: 
+      update_cache: yes
+    when: ansible_distribution in ["CentOS"]   
+  - name: install httpd package 
+    yum:
+     name: httpd 
+      
+  - name: add php support for apache 
+    yum:
+     when: ansible_distribution in ["CentOS"]
+     name: php
+
