@@ -1,0 +1,9 @@
+---
+- name: password change 
+  hosts: all / or the IP of the host you want to use
+  become: true
+  tasks:
+    - name: set password for user
+      user: 
+        name: name1
+        password: "{{'kebapche' | password_hash('sha512', 'atlantis')}}" 
