@@ -1,0 +1,8 @@
+---
+
+ - name: Check httpd service status 
+   
+   systemd:
+     name: httpd
+     state: started 
+     enabled: true

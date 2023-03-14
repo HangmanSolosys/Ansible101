@@ -1,0 +1,6 @@
+---
+- name: check if httpd is running 
+  hosts: all
+  roles: 
+    - check_httpd_service 
+
