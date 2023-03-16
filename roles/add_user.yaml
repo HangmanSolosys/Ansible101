@@ -1,0 +1,8 @@
+---
+- hosts: 192.168.0.104
+  become: yes
+  vars: 
+   Mitko: "myuser"
+   Morkov: "mypassword"
+  roles:
+    - add_user

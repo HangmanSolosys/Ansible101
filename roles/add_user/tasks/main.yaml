@@ -1,0 +1,9 @@
+---
+- name: Add user to remote host
+  user: 
+    name: "{{ Mitko }}"
+    password: "{{Morkov | password_hash('sha512', 's6XgnjqHSgIUX0bE') }}"
+    shell: /bin/bash
+    groups:  
+    createhome: yes
+    
