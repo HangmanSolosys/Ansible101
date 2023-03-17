@@ -1,0 +1,10 @@
+---
+
+- name: Monitor memory usage on remote host
+  hosts: 192.168.0.104
+  become: true
+
+  
+  roles: 
+    - memory-monitor
+
