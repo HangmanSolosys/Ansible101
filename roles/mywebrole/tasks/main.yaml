@@ -1,0 +1,5 @@
+---
+- name: Adding index.html to a remote host
+  copy:
+    src: files/index.html
+    dest: /var/www/html/
